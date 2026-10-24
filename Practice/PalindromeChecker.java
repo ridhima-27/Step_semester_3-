@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class PalindromeChecker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.next();
+        
+        StringBuilder sb = new StringBuilder(word); // Use a mutable string class to build the reversed word[cite: 43]
+        String reversed = sb.reverse().toString();
+        
+        System.out.println(reversed);
+        if (word.equals(reversed)) { // Compare the original string with the reversed string[cite: 43]
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not a palindrome");
+        }
+    }
+}
